@@ -1,0 +1,50 @@
+body{
+	margin: 0;
+	padding: 0;
+	position: absolute;
+	left: 0;
+	top: 0;
+	bottom: 0;
+	right: 0;
+}
+.wrapper{
+	background-color: #fafafa;
+	position: relative;
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+}
+#canvas{
+	left: 50%;
+	top: 70%;
+	margin-left: -100px;
+	position: absolute;
+	transition: transform  0.2s;
+	z-index: 10;
+}
+#result, #start, #history{
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	font-size: 1.5em;
+	color: #345345;
+}
+#result{
+	top: 20%;
+}
+#history{
+	top: 40%;
+}
+.ball-speed-0-5{animation: ball-fall 0.5s linear;}
+.ball-speed-1{animation: ball-fall 1s linear;}
+.ball-speed-2{animation: ball-fall 2s linear;}
+.ball-speed-3{animation: ball-fall 3s linear;}
+
+@keyframes ball-fall
+{
+0%   {bottom:100%;}
+100% {bottom:30%;}
+}
+
+

@@ -1,0 +1,28 @@
+{
+  "name": "three",
+  "version": "0.0.0",
+  "authors": [
+    "Cheng Yi <chyi@bainainfo.com>"
+  ],
+  "description": "a simple but funny h5 game, taking example for android mobile game, running with koa, mongodb and velocity.js, etc.",
+  "main": "index.html",
+  "keywords": [
+    "koa",
+    "velocity",
+    "game"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "moment": "~2.10.3",
+    "purecss": "~0.6.0",
+    "underscore": "~1.8.3",
+    "velocity": "~1.2.2"
+  }
+}

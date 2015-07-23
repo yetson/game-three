@@ -1,0 +1,42 @@
+doctype html
+html(lang="en")
+    head
+        title= three
+        meta(http-equiv="Content-Type",content="text/html; charset=utf-8")
+        meta(
+            id="viewport"
+            name="viewport"
+            content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no"
+        )
+        link(rel="stylesheet", href="/build/css/pure-min.css")
+        link(rel="stylesheet", href="/build/css/three.css")
+    body
+        div(style="margin: 2% auto;text-align:center;")
+            p(style="text-align:left;")
+                a(href="/" style="margin-left: 1em;") 
+                    < back
+            h3 congratulations! you are ranking 
+            p
+                strong(style="font-size:2em;color: #ab34ce;") #{rank}
+            table.pure-table(style="margin: 1em auto")
+                thead
+                    tr
+                        th #
+                        th name
+                        th date
+                        th score
+                tbody
+                    each u,i in users
+                        - var b = !!(i % 2)
+                        if b
+                            tr
+                                td #{u.rank}
+                                td #{u.name}
+                                td #{u.time}
+                                td #{u.score}
+                        else
+                            tr.pure-table-odd
+                                td #{u.rank}
+                                td #{u.name}
+                                td #{u.time}
+                                td #{u.score}

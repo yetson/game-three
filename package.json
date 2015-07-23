@@ -1,0 +1,32 @@
+{
+  "name": "three",
+  "version": "1.0.0",
+  "description": "a simple but funny h5 game,taking example for android mobile game, running with koa, mongodb and velocity, etc.",
+  "main": "index.html",
+  "dependencies": {
+    "es6-promise": "^2.3.0",
+    "koa": "^0.21.0",
+    "koa-bodyparser": "^2.0.0",
+    "koa-jade": "^1.1.0",
+    "moment": "^2.10.3",
+    "koa-static": "^1.4.9",
+    "mongoose": "^4.0.7",
+    "underscore": "^1.8.3",
+    "koa-router": "^5.1.2"
+  },
+  "devDependencies": {
+    "co": "^4.6.0",
+    "gulp": "^3.9.0",
+    "gulp-autoprefixer": "^2.3.1",
+    "gulp-browserify": "^0.5.1",
+    "gulp-rename": "^1.2.2",
+    "gulp-sass": "^2.0.4",
+    "gulp-sourcemaps": "^1.5.2",
+    "gulp-uglify": "^1.2.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "yetson",
+  "license": "MIT"
+}
