@@ -125,7 +125,7 @@ function _dialog(opt){
 
 function _rank(name, score){
 	var form = 	'<p>you got an amazing score <strong>'+score+'</strong>, input your nickname to be famous!</p>\
-				<form class="pure-form pure-form-aligned" method="post" action="/rank">\
+				<form class="pure-form pure-form-aligned" method="post" action="/game-three/rank">\
 				    <fieldset>\
 				        <div class="pure-control-group">\
 				            <label for="name">Nickname</label>\

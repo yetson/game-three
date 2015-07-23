@@ -40,7 +40,6 @@ var Ball = {
 		}else{
             speed = _.random(config.degree.holyshit[0], config.degree.holyshit[1]);
         }
-        speed = _.random(config.degree.holyshit[0], config.degree.holyshit[1]);
 		id = _.now();
 		ball = document.createElement("span");
 		wra.appendChild(ball);	
