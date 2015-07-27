@@ -71,11 +71,11 @@ function history(){
 		con, tpl, table, h;
 	scores = scores.split(";")[0] == "" ? [] : scores.split(";");
 	if(scores.length > 0){
-		table = '<table class="pure-table" style="text-align:center;">\
+		table = '<table class="pure-table pure-table-horizontal" style="text-align:center;">\
 				    <thead>\
 				        <tr>\
 				            <th>name</th>\
-				            <th>&nbsp;&nbsp;&nbsp;date&nbsp;&nbsp;&nbsp;</th>\
+				            <th width="50%">&nbsp;&nbsp;date&nbsp;&nbsp;</th>\
 				            <th>score</th>\
 				        </tr>\
 				    </thead><tbody>';
