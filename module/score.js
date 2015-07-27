@@ -82,7 +82,7 @@ function history(){
 		tpl = _.template("<tr><td>{{name}}</td><td>{{date}}</td><td>{{score}}</td></tr>");
 		_.each(scores.reverse(), function(s, i){
 			var obj = JSON.parse(s),
-				d = {name: name, date: moment(obj.date).startOf('hour').fromNow(), score: obj.score};
+				d = {name: name, date: moment(obj.date).startOf('minute').fromNow(), score: obj.score};
 			h = tpl(d);
 			table +=  h;
 		});
