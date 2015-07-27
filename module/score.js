@@ -139,7 +139,7 @@ function _rank(name, score){
 				            <input type="hidden" name="score" value="'+score+'">\
 				        </div>\
 				        <div class="pure-controls">\
-				            <button type="submit" onclick=javascript:this.diabled=true class="pure-button pure-button-primary">Submit</button>\
+				            <button type="submit" onclick=javascript:window.disableFormButton(this) class="pure-button pure-button-primary">Submit</button>\
 				        </div>\
 				    </fieldset>\
 				</form>',
@@ -147,6 +147,12 @@ function _rank(name, score){
 		name = document.getElementById("name", dialog);
 	name.select();
 	name.focus();
+}
+
+window.disableFormButton = function(obj){
+	setTimeout(function(){
+		obj.setAttribute('disabled', 'disabled');
+	}, 100);
 }
 
 module.exports = {
