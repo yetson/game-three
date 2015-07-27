@@ -43,7 +43,9 @@ function store(opt){
 		name = localStorage.getItem("name") || config.defaultName;
 	if(_.isEmpty(max)){ //first insert
 		localStorage.setItem("maxScore", score);
-        _rank(name, score);
+		if(parseInt(score, 10) > 0){
+        	_rank(name, score);
+		}
 	}else{
 		if(score > max){
 			_rank(name, score);
@@ -92,7 +94,7 @@ function history(){
 function _dialog(opt){
 	var dialog_pannel = document.createElement("div"),
 		panStyle = "position: absolute;overflow:hidden;top: 0;left: 0;right:0;bottom:0;z-index: 100;",
-		diaStyle = "position: absolute;top: 50%;left: 50%;top: -100%;",
+		diaStyle = "position: absolute;left: 50%;top: -100%;",
 		dialog;
 	dialog_pannel.setAttribute("id", "dialog_pannel");
 	dialog_pannel.setAttribute("style", panStyle);
@@ -113,8 +115,12 @@ function _dialog(opt){
 
 	setTimeout(function(){
 		dialog.style.marginLeft = (0 - dialog.scrollWidth / 2) + "px";
-		Velocity(dialog, {bottom: "inherit", top: "3em"}, {easing: "[0,-0.27,1,1.34]", duration: 500});
-		Velocity(dialog_pannel, {backgroundColor: "#000", backgroundColorAlpha: 0.5});	
+		Velocity(dialog_pannel, {backgroundColor: "#000", backgroundColorAlpha: 0.5}, {
+			duration: 100, 
+			complete: function(){
+				Velocity(dialog, {top: "3em"}, {easing: "[0,-0.27,1,1.34]", duration: 500});
+			}
+		});
 	}, 10);
 
 	document.getElementById("dialog_close").onclick = function(){
