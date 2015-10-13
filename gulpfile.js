@@ -28,7 +28,10 @@ gulp.task('scss', function(){
     gulp.src('./scss/*.scss')
         .pipe(sass())
         .pipe(sourcemaps.init())
-        .pipe(autoprefixer())
+        .pipe(autoprefixer({
+                browsers: ['last 2 versions'],
+                cascade: true
+             }))
         .pipe(sourcemaps.write())
         .pipe(gulp.dest(buildPath + 'css'));
 });
